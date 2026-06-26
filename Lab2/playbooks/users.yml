@@ -1,0 +1,11 @@
+---
+- name: Create administrative user
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Create labadmin user
+      user:
+        name: labadmin
+        groups: sudo
+        append: yes
+        shell: /bin/bash

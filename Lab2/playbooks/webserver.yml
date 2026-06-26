@@ -1,0 +1,6 @@
+---
+- name: Deploy web server
+  hosts: webservers
+  become: yes
+  roles:
+    - web

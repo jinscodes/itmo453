@@ -1,0 +1,12 @@
+---
+- name: Create backup directory
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Create backup directory
+      file:
+        path: /var/backups/lab2
+        state: directory
+        owner: root
+        group: root
+        mode: '0755'
